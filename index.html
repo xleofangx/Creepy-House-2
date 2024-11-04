@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creepy House</title>
     <style>
+        font-face { font-family: 'Gingerbread House'; src: url('GingerbreadHouse.ttf') format('truetype'); }
         body {
             background-color: black;
             color: white;
@@ -100,12 +101,12 @@
     <script>
         document.addEventListener('mousemove', function(e) {
             var animatedCursor = document.querySelector('.animated-cursor');
-            animatedCursor.style.left = (e.clientX - 25) + 'px';  // Offset to center the cursor
-            animatedCursor.style.top = (e.clientY + window.scrollY - 25) + 'px';  // Offset to center the cursor
+            animatedCursor.style.left = (e.clientX - 50) + 'px';  // Offset to center the cursor
+            animatedCursor.style.top = (e.clientY + window.scrollY - 50) + 'px';  // Offset to center the cursor
         });
         window.addEventListener('scroll', function() {
             var animatedCursor = document.querySelector('.animated-cursor');
-            animatedCursor.style.top = (e.clientY + window.scrollY - 25) + 'px';  // Adjust position on scroll
+            animatedCursor.style.top = (e.clientY + window.scrollY - 50) + 'px';  // Adjust position on scroll
         });
     </script>
 </body>
