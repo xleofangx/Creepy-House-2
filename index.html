@@ -96,12 +96,12 @@
     <footer>
         <p>Ready to haunt your home with unique, spooky items? Dive into the Creepy House experience!</p>
     </footer>
-    <img src="C:\Users\behap\Downloads\mp4-unscreen.gif" alt="Animated Cursor" class="animated-cursor">
+    <img src="mp4-unscreen.gif" alt="Animated Cursor" class="animated-cursor">
     <script>
         document.addEventListener('mousemove', function(e) {
             var animatedCursor = document.querySelector('.animated-cursor');
-            animatedCursor.style.left = e.pageX + 'px';
-            animatedCursor.style.top = e.pageY + 'px';
+            animatedCursor.style.left = (e.pageX - 25) + 'px';  // Offset to center the cursor
+            animatedCursor.style.top = (e.pageY - 25) + 'px';   // Offset to center the cursor
         });
     </script>
 </body>
