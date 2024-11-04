@@ -102,10 +102,7 @@
     </footer>
     <img src="mp4-unscreen.gif" alt="Animated Cursor" class="animated-cursor">
     <script>
-        document.addEventListener('mousemove', function(e) {
-            var animatedCursor = document.querySelector('.animated-cursor');
-            animatedCursor.style.left = (e.clientX - 50) + 'px';  // Offset to center the cursor
-            animatedCursor.style.top = (e.clientY + window.scrollY - 50) + 'px';  // Offset to center the cursor
+        document.addEventListener('mousemove', function(e) { var animatedCursor = document.querySelector('.animated-cursor'); animatedCursor.style.left = (e.clientX - 50) + 'px'; // Offset for doubled size animatedCursor.style.top = (e.clientY + window.scrollY - 50) + 'px'; // Offset for doubled size
         });
         window.addEventListener('scroll', function() {
             var animatedCursor = document.querySelector('.animated-cursor');
