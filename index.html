@@ -28,7 +28,7 @@
         }
         .featured-items img {
             width: 100%;
-            height: auto;
+            height: auto.
         }
         .shop-now {
             display: block;
@@ -47,6 +47,15 @@
             height: auto;
             pointer-events: none;
             background: transparent;
+        }
+        .cursor-holder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            pointer-events: none;
+            z-index: 1000;
         }
     </style>
 </head>
@@ -82,27 +91,4 @@
         <a href="shop.html" class="shop-now">Enter if you dare</a>
         <section class="about">
             <h2>About Us</h2>
-            <p>Creepy House was founded by [Girlfriend's Name], a collector of all things eerie and unusual. Her passion for the macabre inspired her to share her collection with fellow enthusiasts.</p>
-        </section>
-        <section class="contact">
-            <h2>Follow Us</h2>
-            <p>Stay connected and see our latest finds on <a href="[Instagram Profile Link]" target="_blank">Instagram</a>.</p>
-        </section>
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions? Reach out at <a href="mailto:[Email Address]">[Email Address]</a>.</p>
-        </section>
-    </div>
-    <footer>
-        <p>Ready to haunt your home with unique, spooky items? Dive into the Creepy House experience!</p>
-    </footer>
-    <img src="mp4-unscreen.gif" alt="Animated Cursor" class="animated-cursor">
-    <script>
-        document.addEventListener('mousemove', function(e) {
-            var animatedCursor = document.querySelector('.animated-cursor');
-            animatedCursor.style.left = (e.pageX - 25) + 'px';  // Offset to center the cursor
-            animatedCursor.style.top = (e.pageY - 25) + 'px';   // Offset to center the cursor
-        });
-    </script>
-</body>
-</html>
+            <p>Creepy House was founded by [Girlfriend's Name], a collector of all things eerie and unusual. Her passion for the macabre inspired her to share her collection
