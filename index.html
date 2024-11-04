@@ -28,7 +28,7 @@
         }
         .featured-items img {
             width: 100%;
-            height: auto.
+            height: auto;
         }
         .shop-now {
             display: block;
@@ -42,20 +42,11 @@
             border-radius: 5px;
         }
         .animated-cursor {
-            position: fixed;
+            position: absolute;
             width: 50px;  /* Adjust size as needed */
             height: auto;
             pointer-events: none;
             background: transparent;
-        }
-        .cursor-holder {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50px;
-            height: 50px;
-            pointer-events: none;
-            z-index: 1000;
         }
     </style>
 </head>
@@ -105,14 +96,16 @@
     <footer>
         <p>Ready to haunt your home with unique, spooky items? Dive into the Creepy House experience!</p>
     </footer>
-    <div class="cursor-holder">
-        <img src="mp4-unscreen.gif" alt="Animated Cursor" class="animated-cursor">
-    </div>
+    <img src="mp4-unscreen.gif" alt="Animated Cursor" class="animated-cursor">
     <script>
         document.addEventListener('mousemove', function(e) {
-            var cursorHolder = document.querySelector('.cursor-holder');
-            cursorHolder.style.left = (e.pageX - 25) + 'px';  // Offset to center the cursor
-            cursorHolder.style.top = (e.pageY - 25) + 'px';   // Offset to center the cursor
+            var animatedCursor = document.querySelector('.animated-cursor');
+            animatedCursor.style.left = (e.clientX - 25) + 'px';  // Offset to center the cursor
+            animatedCursor.style.top = (e.clientY + window.scrollY - 25) + 'px';  // Offset to center the cursor
+        });
+        window.addEventListener('scroll', function() {
+            var animatedCursor = document.querySelector('.animated-cursor');
+            animatedCursor.style.top = (e.clientY + window.scrollY - 25) + 'px';  // Adjust position on scroll
         });
     </script>
 </body>
